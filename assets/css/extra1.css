@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  
+  
+  body {
+    background-color: #4e084e;
+  }
+  
+  /* EXTRA 1 */
+  #logo {
+    width: 200px;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .correctWrong {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .anello2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 20px solid transparent;
+    background: conic-gradient(red 33.3%, green 0%) border-box;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  
+  .graphic {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px
+  }
+  
+  button {
+    width: 200px;
+    background-color: transparent;
+    border: solid 5px white;
+    padding: 10px;
+  }

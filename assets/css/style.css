@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0 0 80px 0;
+    padding: 0;
+    color: white;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#logo {
+    height: 5em;
+    margin-top: 2em;
+    margin-left: 8%;
+}
+span{
+    font-weight: bold;
+}
+main{
+    font-size: 16px;
+    margin-left: 8%;
+    margin-top: 4em;
+    margin-bottom: 8%;
+    font-family: "inter";
+}
+
+h1{
+    font-size: 70px;
+    margin-bottom: 0.49em;
+    font-family: "outfit";
+    font-weight: normal;
+    line-height: 0.8; 
+
+}
+
+.container{
+    font-size: 18px;
+}
+.container p:first-of-type {
+    color: #d20094;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 0em;
+}
+.container p:nth-of-type(2) {
+    margin-top: 0.5em;
+}
+
+.form-controls{
+    margin-left: 17px;
+    display: flex;
+}
+ul{
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+li{
+    margin-bottom: 10px;
+}
+
+.checkbox {
+     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1.2em;
+    height: 1.2em;
+    position: relative;    
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid white;
+    margin-right: 12px;
+    margin-top: 17px;
+
+}
+
+.checkbox:checked::after {
+    content: "\2714";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.checkbox + label {
+    margin-right: 500px;
+    margin-top: 15px;
+}
+
+button {
+    width: 230px;
+    height: 60px;
+    background-color: #00ffff;
+    border: 2px solid #00ffff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(8, 14, 78);
+    cursor: pointer; 
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.8) 100%, transparent 70%);
+    box-shadow: 0px 0px 80px rgba(0, 255, 255, 0.5);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #33ffff;
+
+    border-color: #33ffff;
+}
