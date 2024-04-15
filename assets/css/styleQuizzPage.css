@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
 * {
   margin: 0%;
   font-family: "Outfit", sans-serif;
   color: white;
+  box-sizing: border-box;
 }
 
 body {
@@ -15,14 +17,14 @@ body {
 }
 
 .top img {
-  margin-top: 3em;
-  width: 150px;
+  width: 200px;
 }
 
 .top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: start;
+  margin-top: 5%;
 }
 
 .quizz {
@@ -36,7 +38,7 @@ body {
 
 .question {
   width: fit-content;
-  font-size:  4rem;
+  font-size: 4rem;
   text-align: center;
 }
 
@@ -62,23 +64,24 @@ body {
   margin: 2em;
   background-color: transparent;
   cursor: pointer;
-  padding: 5px 15px; 
-  font-size: 1.2em; 
+  padding: 5px 15px;
+  font-size: 1.2em;
   margin: 10px
 }
+
 .answers button:hover {
   width: 46%;
   height: 4em;
   border-radius: 50px;
   margin: 2em;
-  background-color:#d20094;
+  background-color: #d20094;
   cursor: pointer;
-  padding: 5px 15px; 
-  font-size: 1.2em; 
+  padding: 5px 15px;
+  font-size: 1.2em;
   margin: 10px
 }
 
-footer{
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,8 +89,32 @@ footer{
   font-size: 1.5rem;
   margin-top: 160px;
 }
-.remainingQuestions{
-  color: #d20094;
 
+.remainingQuestions {
+  color: white;
+}
+footer span{
+  color: #d20094;
 }
 
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px
+}
+
+#anello {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 20px solid transparent;
+  background: conic-gradient(#ffffff2b 0%, #00ffff 0%) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}

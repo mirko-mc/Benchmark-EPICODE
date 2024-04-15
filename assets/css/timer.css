@@ -26,7 +26,3 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
   }
-  
-  body {
-    background-color: #4e084e;
-  }
