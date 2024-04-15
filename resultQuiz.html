@@ -2,85 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style_result_quiz.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>EPICODE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style_result_quiz.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>EPICODE</title>
 </head>
 
 <body>
-    <header>
-        <div>
-            <a href="https://learn.epicode.com/" target="_blank">
-                <img src="./assets/img/epicode_logo.png" alt="epicode_logo">
-            </a>
+  <header>
+    <div>
+      <a href="https://learn.epicode.com/" target="_blank">
+        <img src="./assets/img/epicode_logo.png" alt="epicode_logo">
+      </a>
+    </div>
+    <div>
+      <!-- campanella -->
+      <i class="fa-regular fa-bell bell"></i>
+      <!-- user -->
+      <i class="fa-solid fa-circle-user user"></i>
+    </div>
+  </header>
+  <header>
+    <img id="logo" src="https://epicode.com/wp-content/uploads/2022/06/EPICODE-2.0-LOGO-15.png" />
+  </header>
+  <main>
+    <div>
+      <h1>Results</h1>
+      <p>The summary of yuor answers:</p>
+    </div>
+
+    <section>
+      <div class="correctWrong">
+        <p>Correct</p>
+        <h2>66.7%</h2>
+        <p>4/6 questions</p>
+      </div>
+      <div>
+        <div class="graphic">
+          <div class="anello2"></div>
+          <h3>Congratulations!</h3>
+          <p>You passed the exam.</p><br>
+          <p>We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)</p>
         </div>
+      </div>
+      <div class="correctWrong">
+        <p>Wrong</p>
+        <h2>33.3%</h2>
+        <p>2/6 questions</p>
+      </div>
+    </section>
+    <button>RATE US</button>
+
+  </main>
+  <main>
+    <section>
+      <!-- animazione superato -->
+      <div id="circle">
+        <h2>Superato!</h2>
+        <span>92%</span>
+        <span>26/28 domande</span>
+      </div>
+      <div id="recap">
+        <!-- riepilogo domande/risposte -->
         <div>
-            <!-- campanella -->
-            <i class="fa-regular fa-bell bell"></i>
-            <!-- user -->
-            <i class="fa-solid fa-circle-user user"></i>
+          <h6>Correct</h6>
+          <h2>10</h2>
         </div>
-    </header>
-    <main>
-        <section>
-            <!-- animazione superato -->
-            <div id="circle">
-                <h2>Superato!</h2>
-                <span>92%</span>
-                <span>26/28 domande</span>
-            </div>
-            <div id="recap">
-                <!-- riepilogo domande/risposte -->
-                <div>
-                    <h6>Correct</h6>
-                    <h2>10</h2>
-                </div>
-                <hr>
-                <div>
-                    <h6>Wrong</h6>
-                    <h2>10</h2>
-                </div>
-                <hr>
-                <div>
-                    <h6>Empty</h6>
-                    <h2>10</h2>
-                </div>
-                <hr>
-                <div>
-                    <h6>Total</h6>
-                    <h2>10</h2>
-                </div>
-            </div>
-        </section>
-        <!-- lista domande -->
-        <section>
-            <div id="supercontainer">
-                <!-- categoria -->
-                <span class="argument">Science : Computer</span>
-                <div class="resultQuiz">
-                    <div class="question">
-                        <!-- numero domanda -->
-                        <span class="number">(28)</span>
-                        <!-- corretta -->
-                        <i class="fa-solid fa-check correct"></i>
-                        <!-- sbagliata -->
-                        <!-- <i class="fa-solid fa-xmark incorrect"></i> -->
-                        <!-- domanda -->
-                        <h4>Domanda del quiz Domanda del quiz Domanda del quiz Domanda del quiz Domanda del quiz Domanda del
-                            quiz Domanda del quiz</h4>
-                    </div>
-                    <div class="answer">
-                        <!-- risposta corretta -->
-                        <span class="correctAnswer">risposta corretta</span>
-                        <!-- risposta utente -->
-                        <span class="userAnswer">risposta utente</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        <hr>
+        <div>
+          <h6>Wrong</h6>
+          <h2>10</h2>
+        </div>
+        <hr>
+        <div>
+          <h6>Empty</h6>
+          <h2>10</h2>
+        </div>
+        <hr>
+        <div>
+          <h6>Total</h6>
+          <h2>10</h2>
+        </div>
+      </div>
+    </section>
+    <!-- lista domande -->
+    <section>
+      <div id="supercontainer">
+        <!-- categoria -->
+        <span class="argument">Science : Computer</span>
+        <div class="resultQuiz">
+          <div class="question">
+            <!-- numero domanda -->
+            <span class="number">(28)</span>
+            <!-- corretta -->
+            <i class="fa-solid fa-check correct"></i>
+            <!-- sbagliata -->
+            <!-- <i class="fa-solid fa-xmark incorrect"></i> -->
+            <!-- domanda -->
+            <h4>Domanda del quiz Domanda del quiz Domanda del quiz Domanda del quiz Domanda del quiz Domanda del
+              quiz Domanda del quiz</h4>
+          </div>
+          <div class="answer">
+            <!-- risposta corretta -->
+            <span class="correctAnswer">risposta corretta</span>
+            <!-- risposta utente -->
+            <span class="userAnswer">risposta utente</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
