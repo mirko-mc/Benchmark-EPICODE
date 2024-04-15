@@ -148,11 +148,59 @@ let currentQuestionIndex = 0;
 
 // Funzione per visualizzare una domanda
 function displayQuestion() {
+    if(currentQuestionIndex>0)document.querySelector("main").remove();
+    // <main class="quizz">quiz
+    const MAIN = document.createElement("main");
+    MAIN.className = "quiz";
+    document.querySelector("body").appendChild(MAIN);
+    // <div class="quizzQuestions">
     // Ottiene la domanda
     const question = questions[currentQuestionIndex];
-
-    // Genera HTML per visualizzare la domanda e risposte
-    quizContainer.textContent = question.question;
+    // <p id="question" class="question">DOMANDA</b></p>
+    const PMAIN = document.createElement("p");
+    PMAIN.textContent = question.question;
+    PMAIN.id = "question";
+    PMAIN.className = "question";
+    MAIN.appendChild(PMAIN);
+    // <div class="answers">
+    const DIVANSWERS = document.createElement("div");
+    DIVANSWERS.className = ("answers");
+    MAIN.appendChild(DIVANSWERS);
+    // <button type="button" onclick="checkAnswer(false)" id="1">RISPOSTA 1</button>
+    // <button type="button" onclick="checkAnswer(false)" id="2">RISPOSTA 2</button>
+    // <button type="button" onclick="checkAnswer(false)" id="3">RISPOSTA 3</button>
+    // <button type="button" onclick="checkAnswer(true)" id="4">RISPOSTA 4</button>
+    let counter = 1;
+    for (const ELEMENT of question.incorrect_answers) {
+        const ANSWERBUTTON = document.createElement("button");
+        ANSWERBUTTON.type = "button";
+        ANSWERBUTTON.id = counter++;
+        ANSWERBUTTON.addEventListener("click", () => { checkAnswer(false) });
+        ANSWERBUTTON.textContent = ELEMENT;
+        DIVANSWERS.appendChild(ANSWERBUTTON);
+    }
+    const ANSWERBUTTON = document.createElement("button");
+    ANSWERBUTTON.type = "button";
+    ANSWERBUTTON.id = counter;
+    // ANSWERBUTTON.click = "checkAnswer(false)";
+    ANSWERBUTTON.textContent = question.correct_answer;
+    DIVANSWERS.appendChild(ANSWERBUTTON);
+    // </div>
+    // </div>
+    // </main>
+    // <footer>
+    const FOOTER = document.createElement("footer");
+    MAIN.appendChild(FOOTER);
+    // <p id="remainingQuestions" class="remainingQuestions">QUESTION </p><span>/10</span>
+    const PFOOTER = document.createElement("p");
+    PFOOTER.id = "remainingQuestions";
+    PFOOTER.class = "remainingQuestions";
+    PFOOTER.textContent = `QUESTION ${currentQuestionIndex + 1}`;
+    FOOTER.appendChild(PFOOTER);
+    const SPAN = document.createElement("span");
+    SPAN.textContent = ` / ${questions.length}`;
+    PFOOTER.appendChild(SPAN);
+    // </footer>
     // for (let j = 0; j < question.incorrect_answers.length; j++) {
     // Inserisce le risposte errate
     document.getElementById("1").textContent = question.incorrect_answers[0];
@@ -176,7 +224,6 @@ function startTimer() {
     // Mostra il timer nel timerContainer
     let timeLeft = QUESTION_TIMEOUT / 1000; // Converti il tempo in secondi
     let gradient = 0;
-
     timer = setInterval(() => {
         timeLeft--;
         const ANELLO = document.getElementById('anello');
