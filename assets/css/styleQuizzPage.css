@@ -2,7 +2,6 @@
 
 * {
   margin: 0;
-  font-family: "Outfit", sans-serif;
   font-family: "Inter", sans-serif;
   color: white;
   box-sizing: border-box;
@@ -38,8 +37,8 @@ body {
 }
 
 .question {
+  font-family: "Outfit", sans-serif;
   width: fit-content;
-  font-size: 4rem;
   text-align: center;
 }
 
